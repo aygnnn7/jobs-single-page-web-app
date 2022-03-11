@@ -1,0 +1,54 @@
+
+h1{
+  width: 100%;
+  text-align: center;
+}
+section{
+  padding: 20px 40%;
+}
+.details{
+  background-color: rgba(58, 83, 228, 0.78);
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  box-shadow: 2px 2px 2px black;
+  border: none;
+  border-radius: 0 0 20px 20px;
+  border-top: 5px #f1bcbc solid;
+  color: white;
+
+}
+
+
+#job-tools{
+  padding-top: 2%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+#edit {
+  text-decoration: none;
+  color: white;
+  background-color: #054f05;
+  width: 70px;
+  height: 25px;
+  text-align: center;
+  box-shadow: 2px 2px 2px #000000;
+}
+#edit:hover {
+  background-color: rgba(5, 79, 5, 0.45);
+}
+#delete{
+  border:none;
+  width: 70px;
+  height:25px;
+  background-color: #a40000;
+  color: white;
+  box-shadow: 2px 2px 2px #000000;
+  cursor: pointer;
+}
+#delete:hover{
+  background-color: rgba(164, 0, 0, 0.55);
+}

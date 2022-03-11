@@ -1,0 +1,18 @@
+<h1>{{currentUser.fName}}'s profile</h1>
+<section>
+
+
+  <div class="details">
+    <div>
+      <p>First name:   {{currentUser.fName}}</p>
+      <p>Last name:   {{currentUser.lName}}</p>
+      <p>Email:    {{currentUser.email}}</p>
+    </div>
+
+  </div>
+
+  <div id="job-tools">
+    <a id="edit" [routerLink]="['/profile','edit',currentUser.id]">Edit</a>
+    <button id="delete" (click)="onDelete()">Delete</button>
+  </div>
+</section>

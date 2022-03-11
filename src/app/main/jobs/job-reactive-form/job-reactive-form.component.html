@@ -1,0 +1,56 @@
+<div class="sg-content">
+  <fieldset>
+        <legend>Add New Song</legend>
+
+    <h3>{{job.id ? 'Update job': 'Create new job'}}</h3>
+
+    <form *ngIf="formGroup"
+          [formGroup]="formGroup"
+          (ngSubmit)="onSubmit()">
+      <div class="sg-form-inner">
+
+        <div class="sg-input">
+          <label for="title">Title</label>
+          <input type="text"
+                 id="title"
+                 formControlName="title">
+        </div>
+
+        <div class="sg-input">
+          <label for="description">Description</label>
+          <input type="text"
+                 id="description"
+                 formControlName="description">
+        </div>
+
+        <div class="sg-input">
+          <label for="type">Type</label>
+          <input type="text"
+                 id="type"
+                 formControlName="type">
+        </div >
+
+        <div class="sg-input">
+          <label for="category">Category</label>
+          <input type="text"
+                 id="category"
+                 formControlName="category">
+        </div>
+
+
+        <div class="error-message" *ngIf="error">
+          <small>All the fields must be filled! <br> Also description should be minimum 15 characters and the others 5! </small>
+        </div>
+        <div class="sg-btns">
+          <button class="sg-save" type="submit" >Save</button>
+          <a class="sg-back" routerLink="/">Back</a>
+        </div>
+      </div>
+    </form>
+  </fieldset>
+</div>
+
+
+
+
+

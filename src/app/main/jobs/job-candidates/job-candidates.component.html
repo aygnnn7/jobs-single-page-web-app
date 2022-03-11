@@ -1,0 +1,15 @@
+
+<h1 class="title">Candidates</h1>
+
+<div class="addJob" >
+  <a routerLink="/jobs/create">Add New Job</a>
+</div>
+
+<section>
+    <div class="element">
+     <app-job-candidate *ngFor="let job of jobs"
+                   [job]="job"
+                   [candidates]="job.candidates!"
+                   (jobDeleted)="onJobDelete($event)"></app-job-candidate>
+    </div>
+</section>

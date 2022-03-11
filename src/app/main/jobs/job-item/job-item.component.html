@@ -1,0 +1,33 @@
+<article>
+  <div class="job">
+    <div class="job-infos">
+       <h3>{{job.title}}</h3>
+       <div class="job-details">
+         <p><strong>Category:</strong>{{job.category}}</p>
+         <p><strong>Type:</strong> {{job.type}}</p>
+         <p><strong>Description:</strong> {{job.description}}</p>
+         <p><strong>Employer:</strong> {{job.owner.fName}} {{job.owner.lName}}</p>
+       </div>
+        <div class="job-counters">
+          <span ><strong>Likes:</strong> {{ likeCount()}}</span>
+          <span *ngIf="!accepted()"><strong>Candidates:</strong> {{candidateCount()}}</span>
+
+          <span style="color: green"  *ngIf="alreadyApplied() || accepted()"><strong>Status:</strong> {{accepted() ? "You are accepted!"
+            : "Pending reply.."}}</span>
+
+        </div>
+    </div>
+
+    <div class="job-tools" *ngIf="!notCompany() && jobOwner()">
+      <a class="edit" [routerLink]="['/jobs','edit',job.id]">Edit</a>
+      <button class="delete" (click)="onDelete()">Delete</button>
+    </div>
+    <div class="job-tools interaction-tools" *ngIf="notCompany()">
+      <button class="like" *ngIf="!alreadyLiked()" (click)="onLike()"><i class="fa fa-heart" aria-hidden="true"></i></button>
+      <button class="unlike" *ngIf="alreadyLiked()" (click)="onDislike()"><i class="fa fa-thumbs-down" aria-hidden="true"></i></button>
+      <button class="apply" *ngIf="!alreadyApplied() && notCompany() && !accepted()" (click)="onApply()">Apply</button>
+      <button class="unApply"  *ngIf="alreadyApplied() && notCompany()" (click)="onUnApply()">Unapply</button>
+    </div>
+  </div>
+
+</article>

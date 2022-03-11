@@ -1,0 +1,212 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "company",
+      "password": "company",
+      "fName": "Jacob",
+      "lName": "Smith",
+      "role": "company"
+    },
+    {
+      "id": 2,
+      "email": "user",
+      "password": "user",
+      "fName": "Henry",
+      "lName": "Jones",
+      "role": "user"
+    },
+    {
+      "id": 3,
+      "email": "user2",
+      "fName": "Alfie",
+      "lName": "Brown",
+      "password": "user2",
+      "role": "user"
+    },
+    {
+      "id": 4,
+      "email": "company2",
+      "fName": "William",
+      "lName": "Johnson",
+      "password": "company2",
+      "role": "company"
+    },
+    {
+      "id": 5,
+      "email": "user3",
+      "fName": "Abraham",
+      "lName": "Johnson",
+      "password": "user3",
+      "role": "user"
+    },
+    {
+      "id": 999,
+      "email": "testUser",
+      "fName": "testUser",
+      "lName": "testUser",
+      "password": "testUser",
+      "role": "user"
+    },
+    {
+      "id": 998,
+      "email": "testCompany",
+      "fName": "testCompany",
+      "lName": "testCompany",
+      "password": "testCompany",
+      "role": "company"
+    }
+  ],
+  "jobs": [
+    {
+      "id": 1,
+      "title": "Mobile Developer",
+      "description": "We are looking for IOS Dev",
+      "type": "Full-time",
+      "category": "IT Field",
+      "active": true,
+      "owner": {
+        "id": 1,
+        "email": "company",
+        "fName": "Jacob",
+        "lName": "Smith",
+        "role": "company"
+      },
+      "likedBy": [
+        {
+          "id": 3,
+          "email": "user2",
+          "fName": "Alfie",
+          "lName": "Brown",
+          "role": "user"
+        },
+        {
+          "id": 5,
+          "email": "user3",
+          "fName": "Abraham",
+          "lName": "Johnson",
+          "role": "user"
+        }
+      ],
+      "acceptedCandidate": {
+        "id": 2,
+        "email": "user",
+        "fName": "Henry",
+        "lName": "Jones",
+        "role": "user"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Test Lead",
+      "description": "Test lead for automotive",
+      "type": "Part-Time",
+      "category": "IT-Field",
+      "active": true,
+      "owner": {
+        "id": 1,
+        "email": "company",
+        "fName": "Jacob",
+        "lName": "Smith",
+        "role": "company"
+      },
+      "likedBy": [
+        {
+          "id": 5,
+          "email": "user3",
+          "fName": "Abraham",
+          "lName": "Johnson",
+          "role": "user"
+        }
+      ],
+      "candidates": []
+    },
+    {
+      "id": 3,
+      "title": "Product Engineer",
+      "description": "Product engineer with German or Polish",
+      "type": "Full-time",
+      "category": "Refugee Status",
+      "active": true,
+      "owner": {
+        "id": 4,
+        "email": "company2",
+        "fName": "William",
+        "lName": "Johnson",
+        "role": "company"
+      },
+      "candidates": [
+        {
+          "id": 3,
+          "email": "user2",
+          "fName": "Alfie",
+          "lName": "Brown",
+          "role": "user"
+        },
+        {
+          "id": 5,
+          "email": "user3",
+          "fName": "Abraham",
+          "lName": "Johnson",
+          "role": "user"
+        },
+        {
+          "id": 2,
+          "email": "user",
+          "fName": "Henry",
+          "lName": "Jones",
+          "role": "user"
+        }
+      ],
+      "likedBy": [
+        {
+          "id": 3,
+          "email": "user2",
+          "fName": "Alfie",
+          "lName": "Brown",
+          "role": "user"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Community Support Specialist",
+      "description": "Community and player support specialist with Italian and English",
+      "type": "Part-Time",
+      "category": "Refugee Status",
+      "active": true,
+      "owner": {
+        "id": 4,
+        "email": "company2",
+        "fName": "William",
+        "lName": "Johnson",
+        "role": "company"
+      },
+      "candidates": [
+        {
+          "id": 2,
+          "email": "user",
+          "fName": "Henry",
+          "lName": "Jones",
+          "role": "user"
+        }
+      ],
+      "likedBy": [
+        {
+          "id": 3,
+          "email": "user2",
+          "fName": "Alfie",
+          "lName": "Brown",
+          "role": "user"
+        },
+        {
+          "id": 5,
+          "email": "user3",
+          "fName": "Abraham",
+          "lName": "Johnson",
+          "role": "user"
+        }
+      ]
+    }
+  ]
+}

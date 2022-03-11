@@ -1,0 +1,41 @@
+section h1{
+  text-align: center;
+}
+.switch button{
+  border:none;
+  cursor: pointer;
+  width: 95px;
+  height: 40px;
+  padding: 5px;
+  box-shadow: 1px 1px 1px black;
+}
+.switch-on{
+  background-color : black;
+  color:white;
+}
+.switch-on:hover{
+  background-color: rgba(0, 0, 0, 0.62);
+}
+
+.switch-off{
+  background-color : white;
+  color:black;
+}
+.switch-add{
+  padding:5px;
+  display: flex;
+  justify-content: center;
+}
+.addJob a{
+  padding: 10px;
+  text-decoration: none;
+  background-color : black;
+  color:white;
+}
+.addJob a:hover{
+  background-color: rgba(0, 0, 0, 0.62);
+
+}
+
+
+

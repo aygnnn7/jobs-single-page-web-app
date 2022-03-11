@@ -1,0 +1,45 @@
+<head>
+  <title>Login</title>
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<div class="container-login">
+  <div class="form-outer-outer">
+    <div class="form-outer">
+      <h1>Login</h1>
+      <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+        <div class="form-input" >
+          <span class="icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></span>
+          <input type="text"
+                 placeholder="Email"
+                 formControlName="email">
+        </div>
+
+        <div class="form-input">
+          <span class="icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></span>
+          <input type="password"
+                 placeholder="Password"
+                 formControlName="password">
+        </div>
+
+        <div class="field-validation-error-div" >
+            <div *ngIf="(emailFormControl?.touched &&
+                  emailFormControl?.invalid) || (passwordFormControl?.touched &&
+                  passwordFormControl?.invalid)">
+              <small *ngIf="!loginFailed">These fields are required.Please be sure that you enter minimum 3 character per bar.</small>
+            </div>
+            <small *ngIf="loginFailed">Incorrect login information. Check your email and password and try again.</small>
+        </div>
+
+
+        <div class="login-or-register">
+          <div class="ask-if-member">
+            <p>Not a member? <a>Join us!</a></p>
+          </div>
+          <button id="submit-login-btn" type="submit">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

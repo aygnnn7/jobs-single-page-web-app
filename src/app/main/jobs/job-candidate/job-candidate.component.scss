@@ -1,0 +1,124 @@
+article{
+  padding: 10px 0;
+  margin-bottom: 20px;
+  h3{
+    width: 100%;
+    text-align: center;
+  }
+}
+.job{
+  background-color: rgba(255, 226, 189, 0.44);
+  padding: 10px;
+  box-shadow: 2px 2px 2px #000000;
+  border-radius: 0 0 20px 20px;
+}
+
+.job-infos{
+  display: flex;
+  flex-wrap: wrap;
+  background: linear-gradient(180deg, rgba(130, 164, 245, 0.65), rgba(243, 243, 243, 0.71));
+  border-radius: 0 0 20px 20px;
+  border-top: 5px solid rgb(52, 100, 234);
+  padding: 0 10px;
+
+}
+
+.counters{
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap ;
+  padding: 4% 0;
+  span{
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 40%;
+  }
+}
+.candidates{
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  span{
+
+  }
+}
+.candidates-title{
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.job-tools{
+  padding-top: 2%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.edit {
+  text-decoration: none;
+  color: white;
+  background-color: #054f05;
+  width: 70px;
+  height: 20px;
+  text-align: center;
+  box-shadow: 2px 2px 2px #000000;
+}
+
+.edit:hover {
+  background-color: rgba(5, 79, 5, 0.45);
+}
+.delete{
+  border:none;
+  width: 70px;
+  height:20px;
+  background-color: #a40000;
+  color: white;
+  box-shadow: 2px 2px 2px #000000;
+  cursor: pointer;
+}
+.delete:hover{
+  background-color: rgba(164, 0, 0, 0.55);
+
+}
+
+.accepted {
+  display: flex;
+  justify-content: center;
+  align-content: start;
+  align-items:baseline;
+  width: 75%;
+
+}
+.deny-btn {
+  background-color: #ee7438;
+  color:white;
+  cursor: pointer;
+  border: none;
+  box-shadow: 1px 1px 1px black;
+  margin-left: 5px;
+
+}
+.deny-btn:hover{
+  background-color: rgba(252, 144, 90, 0.57);
+}
+.accept-btn{
+  background-color: #3193e8;
+  color:white;
+  cursor: pointer;
+  border: none;
+  box-shadow: 1px 1px 1px black;
+  margin-left: 5px;
+
+}
+.accept-btn:hover{
+  background-color: rgba(49, 147, 232, 0.66);
+}
+

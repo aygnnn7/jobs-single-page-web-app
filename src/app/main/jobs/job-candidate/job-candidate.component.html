@@ -1,0 +1,33 @@
+<article *ngIf="jobOwner()">
+  <div class="job">
+  <div class="job-infos">
+    <h3>{{job.title}}</h3>
+
+
+    <div class="candidates" *ngIf="!isEmployeeAccepted()">
+      <span *ngIf="candidateCount() > 0">Candidates</span>
+      <div *ngFor="let candidate of candidates">
+        <span>{{candidate.fName}} {{candidate.lName}}</span>
+        <button class="accept-btn" (click)="accept(candidate)">Accept</button>
+      </div>
+    </div>
+    <div class="accepted" *ngIf="isEmployeeAccepted()">
+      <span><p>{{job.acceptedCandidate!.fName}}
+        {{job.acceptedCandidate!.lName}} is accepted!</p></span>
+      <button class="deny-btn" (click)="deny()">Deny</button>
+    </div>
+    <div class="counters">
+      <span>Likes: {{ likeCount()}}</span>
+      <span *ngIf="!isEmployeeAccepted()">Candidates: {{candidateCount()}}</span>
+    </div>
+
+
+
+
+    <div class="job-tools">
+      <a class="edit" [routerLink]="['/jobs','edit',job.id]">Edit</a>
+      <button class="delete" (click)="onDelete()">Delete</button>
+    </div>
+  </div>
+  </div>
+</article>

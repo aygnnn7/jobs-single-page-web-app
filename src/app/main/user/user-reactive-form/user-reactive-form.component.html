@@ -1,0 +1,47 @@
+
+<div class="sg-content">
+  <fieldset>
+    <legend>Edit Profile</legend>
+      <h3>Profile</h3>
+
+      <form *ngIf="formGroup"
+            [formGroup]="formGroup"
+            (ngSubmit)="onSubmit()">
+        <div class="sg-form-inner">
+
+          <div class="sg-input">
+            <label for="fName">First Name: </label>
+            <input type="text"
+                   id="fName"
+                   formControlName="fName">
+          </div>
+
+          <div class="sg-input">
+            <label for="lName">Last Name</label>
+            <input type="text"
+                   id="lName"
+                   formControlName="lName">
+          </div>
+
+          <div class="sg-input">
+            <label for="password">Password: </label>
+            <input type="password"
+                   id="password"
+                   formControlName="password">
+          </div>
+
+            <div class="error-message" *ngIf="error">
+              <small>All the fields must be filled! <br> Minimum 5 characters per field! </small>
+            </div>
+
+
+          <div class="sg-btns">
+            <button type="submit" class="sg-save">Save</button>
+            <a class="sg-back" routerLink="/">Back</a>
+          </div>
+        </div>
+      </form>
+  </fieldset>
+</div>
+
+

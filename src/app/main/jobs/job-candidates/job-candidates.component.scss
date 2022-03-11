@@ -1,0 +1,29 @@
+h1{
+  text-align: center;
+}
+.addJob{
+  display: flex;
+  justify-content: center;
+}
+
+section{
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  .element{
+    width: 25%;
+
+  }
+}
+.addJob a{
+  padding: 10px;
+  text-decoration: none;
+  background-color : black;
+  color:white;
+}
+.addJob a:hover{
+  background-color: rgba(0, 0, 0, 0.62);
+
+}

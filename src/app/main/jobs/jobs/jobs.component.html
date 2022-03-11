@@ -1,0 +1,25 @@
+
+<section>
+  <h1>{{onlyAppliedJobs ? "Applied" : "All"}} Jobs List</h1>
+  <div class="switch-add">
+    <div class="switch">
+      <button class="switch-on" *ngIf="notCompany() && !onlyAppliedJobs" (click)="onAppliedOrNot()">See Applied</button>
+      <button class="switch-off" *ngIf="notCompany() && onlyAppliedJobs" (click)="onAppliedOrNot()">See All</button>
+    </div>
+    <div class="addJob" *ngIf="!notCompany()">
+      <a routerLink="/jobs/create">Add Job!</a>
+    </div>
+  </div>
+
+
+  <div *ngIf="onlyAppliedJobs">
+    <app-job-item  *ngFor="let job of candidatedJobs"
+                   [job]="job"
+                   (jobDeleted)="onJobDelete($event)"></app-job-item>
+  </div>
+  <div *ngIf="!onlyAppliedJobs">
+    <app-job-item  *ngFor="let job of jobs"
+                   [job]="job"
+                   (jobDeleted)="onJobDelete($event)"></app-job-item>
+  </div>
+</section>
